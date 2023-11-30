@@ -1,9 +1,9 @@
-const { CLIENT_ID, ISSUER } = process.env
+
 
 export default {
   oidc: {
-    clientId: CLIENT_ID,
-    issuer: ISSUER,
+    issuer: 'https://dev-14034212.okta.com/oauth2/default',
+    clientId: '0oabhth3bncajHX4V5d7',
     redirectUri: window.location.origin + '/login/callback',
     scopes: ['openid', 'profile', 'email']
   }

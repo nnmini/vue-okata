@@ -41,6 +41,15 @@
         >
           Profile
         </router-link>
+
+        <router-link
+            to="/table"
+            class="item"
+            id="profile-button"
+            v-if="authState?.isAuthenticated"
+        >
+          Ag Grid
+        </router-link>
         <a
             id="logout-button"
             class="item"

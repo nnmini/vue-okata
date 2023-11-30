@@ -4,6 +4,7 @@ import { LoginCallback, navigationGuard } from '@okta/okta-vue'
 import HomeComponent from '@/components/Home'
 import ProfileComponent from '@/components/Profile'
 import MessagesComponent from '@/components/Messages'
+import AgTable from '@/components/AgTable'
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -27,6 +28,13 @@ const router = createRouter({
       path: '/messages',
       component: MessagesComponent,
       meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/table',
+      component: AgTable,
+      meta:{
         requiresAuth: true
       }
     }
